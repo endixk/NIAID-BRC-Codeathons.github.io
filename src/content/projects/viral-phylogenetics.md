@@ -12,46 +12,46 @@ tags:
 github: "https://github.com/NIAID-BRC-Codeathons/viral-phylogenetics"
 ---
 
-# Viral Structural Phylogenetics
+### Team Information
 
-## Team Information
+#### Team Name: _virAllSpark_
 
-### Team Name: _virAllSpark_
-
-### Team Leads
+#### Team Leads
 
 - David Moi, University of Lausanne [✉️](mailto:david.moi@unil.ch)
 - Dongwook Kim, University of Lausanne [✉️](mailto:dongwook.kim@unil.ch)
 
-### Team Members
+#### Team Members
 
-| Name         | Affiliation            | Expected Role / Expertise                                                                                                            |
-| ------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| David Moi    | University of Lausanne | Project leader (model development) / AI, ML, snakemake, HPC, docker, structural biology, phylogenetics                      |
-| Dongwook Kim | University of Lausanne | Project leader (validation and integration) / Phylogenetics, sequence analysis, protein structures, Protein Language Models |
-| TBD          | -                      | Model development part / AI expert(s) on transformer models, biological language models, sequence embeddings                |
-| TBD          | -                      | Validation part / Biology and/or Bioinformatics expert(s) on virology, viral taxonomy, sequence analysis, sequence database |
+| Name             | Affiliation            | Role / Expertise                                                                                                            |
+| ---------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| David Moi        | University of Lausanne | Project leader (model development) / AI, ML, snakemake, HPC, docker, structural biology, phylogenetics                      |
+| Dongwook Kim     | University of Lausanne | Project leader (validation and integration) / Phylogenetics, sequence analysis, protein structures, Protein Language Models |
+| Alex Partin      | Argonne National Lab.  | TBA |
+| Christian Zmasek | J. Craig Venter Inst.  | TBA |
+| Jamie Overbeek   | Argonne National Lab.  | TBA |
+| Kateland Sipe    | Virginia Tech          | TBA |
 
-## Project Summary
+### Project Summary
 
 In this project, we will zero in on producing a fast and accurate language model for viral structure prediction. Current state-of-the-art models, such as ProstT5, are shown robust in species with a wealth of sequences, while suffering from under-represented species like viruses. For this, we will fine-tune the ProstT5 model weights with the LoRA optimization layer, where we can exploit the recent expansion on viral protein structure databases. We will validate the model by reconstructing viral taxonomy with structurally conserved core genes. Integrating this model into the Foldseek framework will allow us to predict structures from massive, possibly all publicly available, viral sequence databases.
 
-## Goals and Objectives
+### Goals and Objectives
 
 1. **Develop a protein language model for viral structural token prediction**
 2. **Validate the model with ground-truth viral structures and taxonomy**
 3. **Integrate the model into Foldseek and apply on massive databases**
 
-## Approach
+### Approach
 
-### Methods and AI/ML Approaches
+#### Methods and AI/ML Approaches
 
 - Fine-tuning ProstT5 model with LoRA optimization
 - Hugging Face transformers and tokenizers for biological language models
 - Structural phylogenetics using 3Di token predictions
 - Foldseek framework integration for large-scale structure prediction
 
-### Implementation Steps
+#### Implementation Steps
 
 **Milestone 1: Fine-tuning the ProstT5 model with viral sequence/structure pairs**
    - BFVD dataset transformed to 3di and ready to train
@@ -72,7 +72,7 @@ In this project, we will zero in on producing a fast and accurate language model
    - Run model on viral subset of NCBI/UniProt protein databases
    - Convert to 3Di strings as valuable resource for structural analysis
 
-## Data and Resources Required
+### Data and Resources Required
 
 | Resource Type         | Source / Link                                         | Description / Purpose                                                                           |
 | --------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ In this project, we will zero in on producing a fast and accurate language model
 | **Compute / Storage** | Argonne HPC – GPU resources                           | Required for model training, benchmarking, and post-application of the model on large databases |
 | **Compute / Storage** | Argonne HPC – Storage                                 | Required to store prerequisite, intermediate, resulting data produced during the development    |
 
-## Expected Outcomes / Deliverables
+### Expected Outcomes / Deliverables
 
 By the end of the Codeathon, we expect to deliver:
 
@@ -92,15 +92,15 @@ By the end of the Codeathon, we expect to deliver:
 - **Documentation:** Model usage guides and API documentation
 - **Presentation:** Demo showing model performance and validation results
 
-## Potential Impact and Next Steps
+### Potential Impact and Next Steps
 
-### Impact
+#### Impact
 
 - **Infectious disease research or surveillance:** Development of a robust model will enable viral protein structural prediction at unprecedented scale. The resulting knowledgebase will unlock large-scale, deep comparative genomics across viral species with their protein structures, which has been limited by the scarcity of viral structure data.
 - **AI/ML automation and interpretability:** Demonstrates advanced fine-tuning techniques for biological language models and structural prediction at scale
 - **Public health preparedness or education:** Will catalyze downstream advances, including structure-based reclassification of viruses, structure-guided viral identification methods, or metagenomic expansion
 
-### Next Steps After Codeathon
+#### Next Steps After Codeathon
 
 - Expand model to cover broader viral families and clades
 - Integrate with existing viral databases and phylogenetic tools
@@ -108,12 +108,12 @@ By the end of the Codeathon, we expect to deliver:
 - Publish methodology and make model weights publicly available
 - Apply to outbreak surveillance and viral evolution studies
 
-## Technical Support Needed
+### Technical Support Needed
 
 - Datasets preloaded - Pre-downloaded BFVD datasets to save time
 - GPU / LLM access - Access to the ANL GPU resources (for fine-tuning and database-scale prediction)
   API keys
 
-## Additional Comments
+### Additional Comments
 
 This project focuses on addressing the under-representation of viral proteins in current state-of-the-art structural prediction models. By fine-tuning ProstT5 specifically for viral sequences, we aim to create a specialized tool that can handle the unique characteristics of viral proteins and enable large-scale structural analysis across viral species.
